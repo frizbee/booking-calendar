@@ -5,23 +5,15 @@
 
     <table class="table">
       <thead>
-        <th class="week-heading">week</th>
-        <th class="week-heading">week</th>
-        <th class="week-heading">week</th>
-        <th class="week-heading">week</th>
-        <th class="week-heading">week</th>
-        <th class="week-heading">week</th>
-        <th class="week-heading">week</th>
+        <% @date_range.each do |day| %>
+          <th class="week-heading"><%= day %></th>
+        <% end %>
       </thead>
       <tbody>
         <tr>
-          <td class="week-day">day</td>
-          <td class="week-day">day</td>
-          <td class="week-day">day</td>
-          <td class="week-day">day</td>
-          <td class="week-day">day</td>
-          <td class="week-day">day</td>
-          <td class="week-day">day</td>
+          <% @date_range.each do |day| %>
+            <td class="week-day"><%= day %></td>
+          <% end %>
         </tr>
     </table>
 

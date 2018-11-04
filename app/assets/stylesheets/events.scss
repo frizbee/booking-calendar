@@ -1,9 +1,10 @@
 $litegray: #dee2e6;
 .calendar {
-  .week-day {
-    border: 1px solid $litegray;
-  }
   .week-heading {
     text-align: center;
+  }
+  .week-day {
+    border: 1px solid $litegray;
+    height: 130px;
   }
 }
