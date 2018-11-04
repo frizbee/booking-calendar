@@ -1,3 +1,6 @@
+# BOOKING AVAILABLITY CALENDAR
+![alt text](/booking-cal.png)
+
 # USAGE
 
 git clone
