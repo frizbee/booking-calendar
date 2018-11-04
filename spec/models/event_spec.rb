@@ -11,6 +11,8 @@ RSpec.describe Event, type: :model do
     end
 
     it { is_expected.to validate_presence_of(:title) }
+    it { is_expected.to validate_presence_of(:begin_date) }
+    it { is_expected.to validate_presence_of(:end_date) }
 
   end
 end
