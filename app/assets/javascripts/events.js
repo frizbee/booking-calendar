@@ -8,13 +8,13 @@ $(document).on('turbolinks:load', function() {
     __construct: function() {
       const self = this;
       $(document.body).on('click', '[data-date]', function() {
-        self.getModal();
-        console.log('click', $(this).attr("data-date"));
+        self.getModal($(this).attr("data-date"));
       });
     },
 
-    getModal: function() {
+    getModal: function(date) {
       $("#eventModal").modal('toggle');
+      $("#event_begin_date").val(date);
     }
 
   }
