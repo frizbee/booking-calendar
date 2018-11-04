@@ -24,7 +24,7 @@
               <% @events.each do |event| %>
                 <% if event_day(event,day).present? %>
                   <div class="event <%= event_day(event,day) %>">
-                    <%= event_day(event,day) %>
+                    <span class="event-name"><%= if event_day(event,day) == 'first_day' then event.title end %></span>
                   </div>
                 <% end %>
               <% end %>
