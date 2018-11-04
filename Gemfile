@@ -51,6 +51,9 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'pry-rails'
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'terminal-notifier-guard'
 end
 
 
