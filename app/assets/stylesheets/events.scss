@@ -1,3 +1,9 @@
-// Place all the styles related to the events controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$litegray: #dee2e6;
+.calendar {
+  .week-day {
+    border: 1px solid $litegray;
+  }
+  .week-heading {
+    text-align: center;
+  }
+}
