@@ -1,10 +1,23 @@
-$litegray: #dee2e6;
+$lite-gray: #dee2e6;
+$dark-gray: #777;
+$dark-color: #222;
+body { font-size: 16px; }
+
 .calendar {
   .week-heading {
     text-align: center;
+    .week-name {
+      color: $dark-color;
+      display: block;
+    }
+    .week-date {
+      color: $dark-gray;
+      display: block;
+      font-size: 80%;
+    }
   }
   .week-day {
-    border: 1px solid $litegray;
+    border: 1px solid $lite-gray;
     height: 130px;
   }
 }

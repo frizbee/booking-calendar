@@ -6,7 +6,10 @@
     <table class="table">
       <thead>
         <% @date_range.each do |day| %>
-          <th class="week-heading"><%= day %></th>
+          <th class="week-heading">
+            <span class="week-name"><%= day.strftime("%A") %></span>
+            <span class="week-date"><%= day %></span>
+          </th>
         <% end %>
       </thead>
       <tbody>
