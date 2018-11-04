@@ -8,29 +8,8 @@
       <%= link_to "Next", date: @date_range.last + 1.day %>
     </div>
 
-    <table class="table">
-      <thead>
-        <% @date_range.each do |day| %>
-          <th class="week-heading">
-            <span class="week-name"><%= day.strftime("%A") %></span>
-            <span class="week-date"><%= day %></span>
-          </th>
-        <% end %>
-      </thead>
-      <tbody>
-        <tr>
-          <% @date_range.each do |day| %>
-            <td class="week-day" data-date="<%= day %>">
-              <% @events.each do |event| %>
-                <% if event_day(event,day).present? %>
-                  <div class="event <%= event_day(event,day) %>">
-                    <span class="event-name"><%= if event_day(event,day) == 'first_day' then event.title end %></span>
-                  </div>
-                <% end %>
-              <% end %>
-            </td>
-          <% end %>
-        </tr>
+    <table class="table" id="calendar_display">
+      <%= render "events/calendar_display", events: @events, date_range: @date_range %>
     </table>
 
   </div><!-- /calendar -->
