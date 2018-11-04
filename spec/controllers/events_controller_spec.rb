@@ -16,4 +16,12 @@ RSpec.describe EventsController, type: :controller do
     end
   end
 
+  describe "GET @events" do
+    @events = Event.create(title: "Booked by John", begin_date: Date.today, end_date: Date.today + 3.day)
+    it "assign date_rage" do
+      get :index
+      expect(assigns(:date_range)).to match_array([@events])
+    end
+  end
+
 end
