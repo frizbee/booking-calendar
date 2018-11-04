@@ -20,7 +20,7 @@
       <tbody>
         <tr>
           <% @date_range.each do |day| %>
-            <td class="week-day">
+            <td class="week-day" data-date="<%= day %>">
               <% @events.each do |event| %>
                 <% if event_day(event,day).present? %>
                   <div class="event <%= event_day(event,day) %>">
@@ -35,3 +35,4 @@
 
   </div><!-- /calendar -->
 </div>
+
