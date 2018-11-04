@@ -23,7 +23,7 @@
             <td class="week-day">
               <% @events.each do |event| %>
                 <% if event_day(event,day).present? %>
-                  <div class="event">
+                  <div class="event <%= event_day(event,day) %>">
                     <%= event_day(event,day) %>
                   </div>
                 <% end %>
