@@ -31,11 +31,40 @@ body { font-size: 16px; }
         border-bottom-left-radius: 4px;
         border-top-left-radius: 4px;
         margin-left: 50%;
+        position: relative;
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: -1px;
+          bottom: 0;
+          border: 1px solid $green;
+        }
       }
       &.last_day {
         border-bottom-right-radius: 4px;
         border-top-right-radius: 4px;
         margin-right: 50%;
+        position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -1px;
+          bottom: 0;
+          border: 1px solid $green;
+        }
+      }
+      &.full {
+        position: relative;
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: -1px;
+          bottom: 0;
+          border: 1px solid $green;
+        }
       }
     }
   }
