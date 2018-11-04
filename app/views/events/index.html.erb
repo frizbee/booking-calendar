@@ -20,7 +20,11 @@
       <tbody>
         <tr>
           <% @date_range.each do |day| %>
-            <td class="week-day"><%= day %></td>
+            <td class="week-day">
+              <% @events.each do |event| %>
+                <%= event_day(event,day) %>
+              <% end %>
+            </td>
           <% end %>
         </tr>
     </table>
