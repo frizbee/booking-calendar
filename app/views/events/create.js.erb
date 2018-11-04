@@ -1,0 +1,4 @@
+$("#eventModal").modal("toggle");
+$("#calendar_display").html('<%= j render 'calendar_display', events: @events, date_range: @date_range %>');
+$("#event_title").val('');
+
