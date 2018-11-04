@@ -1,4 +1,4 @@
- <%= form_with scope: :event do |form| %>
+ <%= form_with scope: :event, id: "add_event_form" do |form| %>
   <div class="modal-header">
     <h5 class="modal-title" id="exampleModalLabel">Add event</h5>
     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -9,8 +9,9 @@
 
     <%= hidden_field_tag 'date', params[:date] %>
 
-    <div class="form-group">
+    <div class="form-group required">
       <%= form.text_field :title, class: "form-control", placeholder: "Event title" %>
+      <span class="error-text" style="display:none;">Required</span>
     </div>
 
     <div class="form-group">
@@ -27,6 +28,6 @@
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-    <button type="submit" class="btn btn-primary">Add</button>
+    <button type="button" id="submit_btn" class="btn btn-primary">Add</button>
   </div>
 <% end %>

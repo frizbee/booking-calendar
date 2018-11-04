@@ -81,3 +81,15 @@ table {table-layout: fixed; }
     }
   }
 }
+
+#add_event_form {
+  .error {
+    input {
+    border: 1px solid red;
+  }
+  }
+  .error-text {
+    color: red;
+  }
+
+}
