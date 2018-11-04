@@ -3,6 +3,11 @@
 
   <div class="calendar">
 
+    <div class="navigation">
+      <%= link_to "Prev", date: @date_range.first - 1.day %>
+      <%= link_to "Next", date: @date_range.last + 1.day %>
+    </div>
+
     <table class="table">
       <thead>
         <% @date_range.each do |day| %>

@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
   def index
-    @date_range = (Date.today.beginning_of_week..Date.today.end_of_week).to_a
+    date = params.fetch(:date, Date.today).to_date
+    @date_range = (date.beginning_of_week..date.end_of_week).to_a
   end
 
   def create
