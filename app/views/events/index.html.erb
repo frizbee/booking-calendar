@@ -4,8 +4,8 @@
   <div class="calendar">
 
     <div class="navigation">
-      <%= link_to "Prev", date: @date_range.first - 1.day %>
-      <%= link_to "Next", date: @date_range.last + 1.day %>
+      <%= link_to icon('far', 'caret-square-left'), date: @date_range.first - 1.day %>
+      <%= link_to icon('far', 'caret-square-right'), date: @date_range.last + 1.day %>
     </div>
 
     <table class="table" id="calendar_display">
